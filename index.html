@@ -262,6 +262,12 @@ body.locked{overflow:hidden}
 .d-hook{font-family:var(--display);font-style:italic;font-size:19px;color:var(--muted);margin:14px 0 0;max-width:52ch}
 .d-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:48px;padding-top:32px}
 @media (max-width:860px){.d-hero,.d-grid{grid-template-columns:1fr;gap:24px}}
+.vids{display:flex;flex-wrap:wrap;gap:24px;margin-top:24px}
+.vid{margin:0;width:360px;max-width:100%}
+.vframe{position:relative;width:100%;aspect-ratio:9/16;overflow:hidden;border-radius:4px;background:#000;border:1px solid var(--rule)}
+.vframe iframe{position:absolute;left:0;top:0;width:360px;height:640px;border:0;transform-origin:0 0;transform:scale(var(--s,1))}
+.vid figcaption{display:flex;justify-content:space-between;gap:12px;align-items:baseline;margin-top:10px;font-size:14.5px}
+.vid figcaption .mono{color:var(--muted)}
 .d-photo{margin:0}
 .d-photo .ph{background:var(--tint);border:1px solid var(--rule);border-top:4px solid var(--c);border-radius:4px;display:flex;justify-content:center;overflow:hidden}
 .d-photo img{display:block;max-width:100%;max-height:460px;width:auto;height:auto}
@@ -485,6 +491,12 @@ section{border-top:0}
         <p><span class="en">American presidential history series on the Curia / 美利坚档案 channel, Douyin, 2026–present. Episodes on Joe Biden, Franklin D. Roosevelt, and Richard Nixon.</span><span class="zh">美利坚档案 Curia · 抖音 · 2026年至今。已发布拜登、罗斯福、尼克松等专题。</span></p>
       </div>
       <a class="btn" href="https://v.douyin.com/xrsNKrtPNW8/"><span class="en">Watch on Douyin</span><span class="zh">在抖音观看</span> ↗</a>
+    </div>
+    <div class="vids">
+      <figure class="vid">
+        <div class="vframe"><iframe src="https://open.douyin.com/player/video?vid=7699114090802760987&amp;autoplay=0" title="The Pinnacle of Power, Episode 1: Joe Biden" width="360" height="640" scrolling="no" loading="lazy" allowfullscreen allow="fullscreen; autoplay; encrypted-media"></iframe></div>
+        <figcaption><b><span class="en">Episode 1: Joe Biden</span><span class="zh">第一集：乔·拜登</span></b><span class="mono"><span class="en">about 303K views</span><span class="zh">播放约30.3万</span></span></figcaption>
+      </figure>
     </div>
   </div>
 </section>
@@ -755,6 +767,9 @@ function route(){var id=location.hash.slice(1),s=S.filter(function(x){return x.i
  else if(!det.hidden){det.hidden=true;document.body.classList.remove('locked');if(id==='research'){document.getElementById('research').scrollIntoView();}else{window.scrollTo(0,lastScroll);}}
 }
 window.addEventListener('hashchange',route);
+/* scale fixed-size Douyin players to fit narrow screens */
+function fitVids(){document.querySelectorAll('.vframe').forEach(function(v){v.style.setProperty('--s',Math.min(1,v.clientWidth/360));});}
+window.addEventListener('resize',fitVids);fitVids();
 document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!det.hidden)location.hash='research';});
 route();
 })();
