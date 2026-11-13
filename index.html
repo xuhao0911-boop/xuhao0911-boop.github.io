@@ -1009,8 +1009,8 @@ body.lock #fxBar{opacity:0}
         <span class="go"><span class="en">Learn more</span><span class="zh">了解更多</span></span></div></a>
       <a class="item" href="#atlas"><div class="im"><img src="atlas.jpg" alt="" loading="lazy"></div>
         <div class="cap"><div class="k"><span class="en">Live</span><span class="zh">已上线</span></div>
-        <h3><span class="en">Xuchang Policy Atlas</span><span class="zh">许昌·城市观察</span></h3>
-        <p><span class="en">Plans and policies for one Chinese city, 2019–2035.</span><span class="zh">一座城市 2019—2035 年的规划与政策图谱。</span></p>
+        <h3><span class="en">Getting to Know Xuchang</span><span class="zh">了解许昌</span></h3>
+        <p><span class="en">A site on one Chinese city: travel, returning home, history, and its plans and policies, 2019–2035.</span><span class="zh">一座城市的网站：游许昌、回许昌、读许昌，以及 2019—2035 年的规划与政策图谱。</span></p>
         <div class="dh-num"><div><b>68</b><span class="en">policy entries</span><span class="zh">条政策与线索</span></div><div><b>84</b><span class="en">cited sources</span><span class="zh">条出处</span></div></div>
         <span class="go"><span class="en">Learn more</span><span class="zh">了解更多</span></span></div></a>
       <a class="item" href="#timeline"><div class="im dh-tl2"><div class="strip"><img src="mvla.jpg" alt="" loading="lazy"><img src="sites.jpg" alt="" loading="lazy"><img src="value.jpg" alt="" loading="lazy"><img src="nhpa.jpg" alt="" loading="lazy"></div><span class="big">1853 — 1966</span><span class="ax"></span><i class="nd" style="left:12.5%"></i><i class="nd" style="left:37.5%"></i><i class="nd" style="left:62.5%"></i><i class="nd" style="left:87.5%"></i><b class="yr" style="left:12.5%">1858</b><b class="yr" style="left:37.5%">1935</b><b class="yr" style="left:62.5%">1949</b><b class="yr" style="left:87.5%">1966</b></div>
@@ -1577,7 +1577,7 @@ function agentBody(){
 /* ---------- atlas subpage: richer layout with a how-to-use guide below the "open" button ---------- */
 function atlasBody(){
  var rv=function(c){return '<div class="ag-rv">'+c+'</div>';};
- var btn='<a class="btn solid" href="https://xuchang-planning-atlas.fey-bean-5393.chatgpt.site/" target="_blank" rel="noopener">'+L('Open the atlas','打开网站')+' ↗</a>';
+ var btn='<a class="btn solid" href="https://xuhao0911-boop.github.io/xuchang/" target="_blank" rel="noopener">'+L('Open the site','打开网站')+' ↗</a>';
  var n=function(i){return '<i class="xc-n">'+i+'</i>';};
  var h='<div class="ag-root xc-root">'+figure('atlas');
 
@@ -1618,7 +1618,7 @@ function atlasBody(){
  h+='<div class="d-sec"><h4>'+L('How to use it','使用指引')+'</h4>'+rv(
   '<div class="ag-panel xc-win">'+
    '<div class="ag-bar"><span class="ag-tl">'+L('Interface tour','界面导览')+'</span><span class="ag-pill">'+L('click a tab','点击上方标签')+'</span></div>'+
-   '<div class="xc-chrome"><div class="xc-brand"><b>许</b><span>许昌 · 城市观察</span></div>'+
+   '<div class="xc-chrome"><div class="xc-brand"><b>许</b><span>了解许昌</span></div>'+
     '<div class="xc-tabs">'+tabs.map(function(t,i){return '<button type="button" class="xc-tab'+(i===0?' on':'')+'" data-t="'+i+'">'+L(t[0],t[1])+'</button>';}).join('')+'</div>'+
     '<div class="xc-acts"><span title="我的关注">☆</span><span>'+L('Export','导出')+' ↓</span></div></div>'+
    '<div class="xc-stage">'+scenes.map(function(s,i){return '<div class="xc-scene'+(i===0?' on':'')+'" data-t="'+i+'">'+s+'</div>';}).join('')+'</div>'+
@@ -1941,8 +1941,8 @@ agent:{sec:'digital',kick:L('Digital humanities · In development','数字人文
  hook:L('A review tool that checks, item by item, whether a history paper’s questions, sources, and arguments hold up — for the author’s own revision, not for writing.','逐条检查历史学论文的研究问题、史料与论证是否成立，用于作者自查与修订，而不是代写。'),
  body:agentBody},
 atlas:{sec:'digital',kick:L('Digital humanities · Live','数字人文 · 已上线'),
- title:L('Xuchang City Observatory: Policy Atlas','「许昌·城市观察」区域发展与政策图谱'),
- hook:L('Plans, policies, and key projects for Xuchang, its districts and counties, and Henan Province, 2019–2035 — every entry with its issuing body, date, and check date.','整合 2019—2035 年许昌市、各区县及河南省的规划、政策与重点项目，每条标注发布机关、日期与核对时间。'),
+ title:L('Getting to Know Xuchang','了解许昌'),
+ hook:L('The Xuchang site has four parts: travel, returning home, history, and city development. The development part collects plans, policies, and key projects for Xuchang, its districts and counties, and Henan Province, 2019–2035, every entry with its issuing body, date, and check date.','许昌网站分游许昌、回许昌、读许昌和城市发展四部分。城市发展部分整合 2019—2035 年许昌市、各区县及河南省的规划、政策与重点项目，每条标注发布机关、日期与核对时间。'),
  body:atlasBody},
 timeline:{sec:'digital',kick:L('Digital humanities · Live','数字人文 · 已上线'),title:L('American Historic Preservation: Data Timeline, 1853–1966','美国历史保护数据时间线（1853—1966）'),hook:L('Every event is a record with a date, a level of government, a source and a link to the paper it comes from. Filter by level, pick out one paper’s events, open any event for its source.','每个节点是一条记录：日期、层级、出处，以及对应的论文。可以按层级筛选，单看某一篇论文的事件，点开任何一条读出处。'),body:tvBody},
 diff:{sec:'digital',kick:L('Digital humanities · Live','数字人文 · 已上线'),title:L('Statute Text Comparator','立法文本对比器'),hook:L('Put two versions of a statute side by side and see which words were added or removed. Covers the Antiquities Act of 1906, the Historic Sites Act of 1935 and the National Historic Preservation Act of 1966.','把一部法的两个版本并排，看哪些词被删去、哪些是新增。目前收录1906年《古迹法》、1935年《历史遗址法》和1966年《国家历史保护法》中的条文。'),body:diffBody},
