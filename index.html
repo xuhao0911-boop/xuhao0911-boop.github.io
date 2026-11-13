@@ -1412,7 +1412,7 @@ document.getElementById('studies').innerHTML=
  '<a class="item wide series" href="#preservation"><div class="im"><img src="'+PH.mvla.src+'" alt="" loading="lazy"></div><div class="cap"><div class="k"><span>'+L('1846–1966','1846—1966')+'</span><span class="tag">'+L('Series','专题')+'</span></div>'+
  '<h3>'+SERIES_T+'</h3><p>'+SERIES_P+'</p><ul class="series-list">'+SERIES.map(function(id){return '<li>'+byId(id).short+'</li>';}).join('')+'</ul><span class="go">'+L('Explore the series','进入专题')+'</span></div></a>'+
  /* like the series card: image left, text right */
- ((function(s){return tile(s.id,PH[s.id].src,s.period+' · '+THEME[s.theme],L('The Xuchang Tobacco Case: how far would the U.S. embassy go?','许昌烟叶案：美国使馆管到哪一步？'),s.hook);})(byId('xuchang'))+
+ ((function(s){return tile(s.id,PH[s.id].src,s.period+' · '+THEME[s.theme],L('Treaty Rights and Market Access: American Commercial Diplomacy in the 1936 Xuchang Tobacco Dispute','条约权利与市场准入：1936年许昌烟叶争端中的美国商业外交'),s.hook);})(byId('xuchang'))+
  tile('pitt',PH.pitt.src,L('2025 · Co-authored','2025 · 合作论文'),L('Industrial-Heritage Tourism and Urban Renewal','工业遗产旅游赋能城市更新'),L('Taking Pittsburgh as a case, the paper examines the paths and models by which industrial-heritage tourism enters urban renewal, and their implications for Xiangtan.','以匹兹堡为个案，考察工业遗产旅游参与城市更新的路径与模式，并讨论其对湘潭的借鉴意义。'))).replace(/class="item"/g,'class="item wide"');
 
 
