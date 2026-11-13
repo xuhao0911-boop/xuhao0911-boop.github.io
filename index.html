@@ -423,6 +423,7 @@ html[data-lang="zh"] .st-title{word-break:keep-all;overflow-wrap:anywhere}
 .st-sec>h4{display:flex;align-items:center;gap:18px;margin:0 0 28px;font:600 14px var(--sys);letter-spacing:.16em;text-transform:uppercase;color:var(--accent)}
 .st-sec>h4::after{content:"";flex:1;height:1px;background:color-mix(in srgb,var(--ink) 14%,transparent)}
 .st-q{font-family:var(--head);font-size:clamp(22px,1.9vw,29px);line-height:1.6;max-width:34em;padding-left:clamp(20px,2vw,32px);border-left:3px solid var(--accent)}
+.st-p{font-size:clamp(18px,1.4vw,20px);line-height:1.85;max-width:40em;margin:0}
 .st-args{display:grid;grid-template-columns:1fr 1fr;gap:20px}
 .arg{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:clamp(26px,2.4vw,38px);transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s}
 .arg:hover{transform:translateY(-3px);box-shadow:0 26px 48px -32px rgba(0,0,0,.4)}
@@ -1011,7 +1012,7 @@ body.lock #fxBar{opacity:0}
         <div class="cap"><div class="k"><span class="en">Live</span><span class="zh">已上线</span></div>
         <h3><span class="en">Getting to Know Xuchang</span><span class="zh">了解许昌</span></h3>
         <p><span class="en">A site on one Chinese city: travel, returning home, history, and its plans and policies, 2019–2035.</span><span class="zh">一座城市的网站：游许昌、回许昌、读许昌，以及 2019—2035 年的规划与政策图谱。</span></p>
-        <div class="dh-num"><div><b>68</b><span class="en">policy entries</span><span class="zh">条政策与线索</span></div><div><b>84</b><span class="en">cited sources</span><span class="zh">条出处</span></div></div>
+        <div class="dh-num"><div><b>68</b><span class="en">policy entries</span><span class="zh">条政策与线索</span></div></div>
         <span class="go"><span class="en">Learn more</span><span class="zh">了解更多</span></span></div></a>
       <a class="item" href="#timeline"><div class="im dh-tl2"><div class="strip"><img src="mvla.jpg" alt="" loading="lazy"><img src="sites.jpg" alt="" loading="lazy"><img src="value.jpg" alt="" loading="lazy"><img src="nhpa.jpg" alt="" loading="lazy"></div><span class="big">1853 — 1966</span><span class="ax"></span><i class="nd" style="left:12.5%"></i><i class="nd" style="left:37.5%"></i><i class="nd" style="left:62.5%"></i><i class="nd" style="left:87.5%"></i><b class="yr" style="left:12.5%">1858</b><b class="yr" style="left:37.5%">1935</b><b class="yr" style="left:62.5%">1949</b><b class="yr" style="left:87.5%">1966</b></div>
         <div class="cap"><div class="k"><span class="en">Live</span><span class="zh">已上线</span></div>
@@ -1411,7 +1412,7 @@ document.getElementById('studies').innerHTML=
  '<a class="item wide series" href="#preservation"><div class="im"><img src="'+PH.mvla.src+'" alt="" loading="lazy"></div><div class="cap"><div class="k"><span>'+L('1846–1966','1846—1966')+'</span><span class="tag">'+L('Series','专题')+'</span></div>'+
  '<h3>'+SERIES_T+'</h3><p>'+SERIES_P+'</p><ul class="series-list">'+SERIES.map(function(id){return '<li>'+byId(id).short+'</li>';}).join('')+'</ul><span class="go">'+L('Explore the series','进入专题')+'</span></div></a>'+
  /* like the series card: image left, text right */
- ((function(s){return tile(s.id,PH[s.id].src,s.period+' · '+THEME[s.theme],L('Buying tobacco in Xuchang: would the U.S. embassy step in?','到许昌收烟叶，美国使馆管不管？'),s.hook);})(byId('xuchang'))+
+ ((function(s){return tile(s.id,PH[s.id].src,s.period+' · '+THEME[s.theme],L('The Xuchang Tobacco Case: how far would the U.S. embassy go?','许昌烟叶案：美国使馆管到哪一步？'),s.hook);})(byId('xuchang'))+
  tile('pitt',PH.pitt.src,L('2025 · Co-authored','2025 · 合作论文'),L('Industrial-Heritage Tourism and Urban Renewal','工业遗产旅游赋能城市更新'),L('Taking Pittsburgh as a case, the paper examines the paths and models by which industrial-heritage tourism enters urban renewal, and their implications for Xiangtan.','以匹兹堡为个案，考察工业遗产旅游参与城市更新的路径与模式，并讨论其对湘潭的借鉴意义。'))).replace(/class="item"/g,'class="item wide"');
 
 
@@ -1581,7 +1582,7 @@ function atlasBody(){
  var n=function(i){return '<i class="xc-n">'+i+'</i>';};
  var h='<div class="ag-root xc-root">'+figure('atlas');
 
- h+='<div class="d-sec"><div class="kpis"><div><b>68</b><span>'+L('policy entries','条政策与线索')+'</span></div><div><b>84</b><span>'+L('cited sources','条出处')+'</span></div><div><b>9</b><span>'+L('themes','条发展主线')+'</span></div><div><b>6</b><span>'+L('districts & counties','个区县')+'</span></div></div></div>';
+ h+='<div class="d-sec"><div class="kpis"><div><b>68</b><span>'+L('policy entries','条政策与线索')+'</span></div><div><b>9</b><span>'+L('themes','条发展主线')+'</span></div><div><b>6</b><span>'+L('districts & counties','个区县')+'</span></div></div></div>';
  h+='<div class="d-sec">'+btn+'</div>';
 
  /* guide: interface tour (three tabs) */
@@ -1602,7 +1603,7 @@ function atlasBody(){
    '<text x="30" y="158" class="t-s">“十四五”现代供应链规划</text><rect x="90" y="164" width="150" height="10" rx="5" class="bar"/><circle cx="135" cy="169" r="6" class="dot"/>'+
    '<text x="30" y="204" class="t-s">▬ 涉及时段　● 来源公开日期（示意）</text></svg>',
   /* sources */
-  '<svg viewBox="0 0 560 230" role="img" aria-label="sources"><text x="24" y="30" class="t-d">84 条出处</text><rect x="420" y="14" width="120" height="26" rx="6" class="b-line"/><text x="432" y="32" class="t-s">导出政策资料 ↓</text>'+
+  '<svg viewBox="0 0 560 230" role="img" aria-label="sources"><text x="24" y="30" class="t-d">资料来源</text><rect x="420" y="14" width="120" height="26" rx="6" class="b-line"/><text x="432" y="32" class="t-s">导出政策资料 ↓</text>'+
    [['2026-10-15','关于面向社会公开征集2027年市重点民生实事建议的公告','许昌市人民政府'],['2026-06-17','许昌市国民经济和社会发展第十五个五年规划纲要','许昌市人民政府'],['2026-05-13','2025年许昌市国民经济和社会发展统计公报','许昌市统计局（市工信局转载）']].map(function(r,i){var Y=58+i*54;return '<g class="row"><rect x="24" y="'+Y+'" width="516" height="44" rx="8"/><text x="38" y="'+(Y+19)+'" class="t-s">'+r[0]+'　'+r[2]+'</text><text x="38" y="'+(Y+36)+'" class="t-d">'+r[1]+' ↗</text><text x="470" y="'+(Y+27)+'" class="t-s">核验说明 ▸</text></g>';}).join('')+'</svg>'
  ];
  var tabs=[['Explore map','探索地图'],['Timeline','时间轴'],['Sources','资料来源']];
@@ -1613,7 +1614,7 @@ function atlasBody(){
   [L('2019–2035 on one axis','把 2019—2035 放在一条轴上'),
    [L('Switch between “period covered” and “publication date”; the filters work as on the map.','可在「涉及时段」与「发布日期」之间切换，筛选方式与地图相同。')]],
   [L('Every entry traced back','每一条都能回到出处'),
-   [L('84 sources, each with its issuing body, date and a verification note. The verification rules, map notes, time conventions and coverage statement are kept on this page too.','84 条出处，各标发布机关、日期和「核验说明」；核验规则、地图说明、时间口径和覆盖范围也收在这一页。')]]
+   [L('Each source carries its issuing body, date and a verification note. The verification rules, map notes, time conventions and coverage statement are kept on this page too.','每条出处各标发布机关、日期和「核验说明」；核验规则、地图说明、时间口径和覆盖范围也收在这一页。')]]
  ];
  h+='<div class="d-sec"><h4>'+L('How to use it','使用指引')+'</h4>'+rv(
   '<div class="ag-panel xc-win">'+
@@ -2099,8 +2100,31 @@ function renderPitt(){return stHero({title:L('Paths and Models for Industrial He
   sub:L('Pittsburgh’s Experience and Lessons for Xiangtan','匹兹堡的经验及对湘潭的启示'),
   lead:L('Taking Pittsburgh as a case, the paper examines the paths and models through which industrial-heritage tourism has been incorporated into urban renewal, and considers their implications for Xiangtan, an industrial city in Hunan.','论文以匹兹堡为个案，考察工业遗产旅游参与城市更新的路径与模式，并讨论其对湖南工业城市湘潭的借鉴意义。'),
   img:'pitt',meta:[[L('Date','时间'),L('October 2025','2025年10月')],[L('Co-author','合作'),L('Zhang Xiaohu','张骁虎')],[L('Recognition','荣誉'),L('Outstanding Paper','优秀论文')]]})+
- '<div class="st-body solo"><div class="st-main"><section class="st-sec"><h4>'+L('Recognition','获奖')+'</h4><p class="st-q">'+
- L('Selected as an Outstanding Paper at the 15th Annual Academic Conference of Hunan Social Science Circles; awarded by the Hunan Federation of Social Science Circles, October 2025.','入选第十五届湖南省社会科学界学术年会优秀论文，由湖南省社会科学界联合会颁发，2025年10月。')+'</p></section></div></div>';}
+ (function(){
+  var P=function(en,zh){return '<p class="st-p">'+L(en,zh)+'</p>';};
+  var card=function(a){return '<div class="arg"><h3>'+L(a[0],a[1])+'</h3><p>'+L(a[2],a[3])+'</p></div>';};
+  var toc=[['pt-a',L('Argument','论文要点')],['pt-q',L('Questions','研究问题')],['pt-w',L('Why Pittsburgh','为什么是匹兹堡')],['pt-s',L('For Xiangtan','对湘潭的建议')],['pt-c',L('Conclusion','结论')]];
+  var five=[
+   ['Raise awareness; repair and protect','提高意识，修复保护','Xiangtan’s Overall Plan for Tourism Development (2018–2030) favours natural scenery, red culture and folk customs, and does not plan for industrial-heritage tourism. The city should survey its industrial heritage, draw up a protection list, and repair and protect what is on it.','《湘潭市全域旅游发展总体规划（2018—2030）》偏重自然风光、红色文化、民俗风貌，未对工业遗产旅游进行规划。需要对全市工业遗产进行统计，编制保护目录，再进行保护和修复。'],
+   ['Improve access and openness','完善基础设施，提升通达性','Many sites have poor transport and few shops, restaurants or lodgings nearby. The Xiangtan Shipyard faces the Xianggang wharf, for example; a ferry between the two would link the visiting routes.','不少遗产交通条件差，周边缺乏商店、餐饮、住宿。例如湘潭船舶厂位于湘钢码头对面，可开通湘钢—湘潭船舶厂的摆渡船，把两处参观路线串起来。'],
+   ['Strengthen multiple functions','强化多元功能','Industrial space should move beyond a single “productive” use. The next urban development and tourism plans should weigh heritage as a whole and build housing, education and leisure into it.','突破工业空间“生产性”的单一属性。在编制城市发展规划、旅游发展规划时整体考虑工业遗产的作用，把居住、教育传播、休闲娱乐等功能嵌入其中。'],
+   ['Carry on industrial culture and memory','延续工业文化与历史记忆','Xiangtan’s tourism is mostly “see the production line, hear a talk”. Oral-history material can be collected and former workers hired as guides, so the public can “touch” industrial history.','湘潭现有的工业遗产旅游以“参观生产线+科普讲解”为主。可以搜集整理口述史资料，聘请工人担任讲解员，让公众“触摸”到工业历史。'],
+   ['Build multi-party governance','构建多元治理体系','Government steers through plans, tax incentives and subsidies; enterprises and the public take part in building, running and maintaining; the three together sustain industrial-heritage tourism.','政府通过发展规划、税收优惠与补贴引导方向，企业与公众参与建设、运营、维护，三方形成合力，推动工业遗产旅游可持续发展。']];
+  return '<div class="st-body"><nav class="st-toc" aria-label="Contents">'+toc.map(function(t){return '<button type="button" data-t="'+t[0]+'">'+t[1]+'</button>';}).join('')+'</nav><div class="st-main">'+
+  '<section class="st-sec" id="pt-a"><h4>'+L('The argument','论文要点')+'</h4><div class="st-args">'+
+   card(['Decline is a blocked reproduction of space','衰落是空间再生产受阻','An industrial city’s decline is not only the collapse of its industry. In the second half of the twentieth century Pittsburgh, the “steel capital” of the United States, suffered a degraded environment, heavy population loss, a fractured community and a broken industrial culture; closed, single-function industrial land became a “vacuum” and a “blemish” in the city.','作为美国“钢铁之都”，匹兹堡在20世纪后半叶陷入衰退：生态环境恶化、人口大量流失、社区结构瓦解、工业文化断裂。封闭、功能单一的废弃工业区成为城市的“真空地带”和“城市污点”。工业城市的衰落不仅是产业凋敝的结果。'])+
+   card(['Heritage tourism as the way in','以工业遗产旅游为切入','From the end of the century the city reused industrial space, rebuilt its cultural meaning and opened the reproduction of space to many participants: ecological restoration, wider functions, a narrative of industrial culture, multi-party governance. Together they form a systematic mechanism that turns heritage from a “scar of the city” into a “place of hope”.','20世纪末，匹兹堡通过工业空间再利用、文化意义重构和多元参与，实施生态环境修复、空间功能拓展、工业文化叙事构建、多元治理实施等举措，构成高度系统化的空间再生产机制，推动工业遗产从“城市伤疤”变为“希望之地”。'])+
+  '</div></section>'+
+  '<section class="st-sec" id="pt-q"><h4>'+L('The questions','研究问题')+'</h4>'+
+   '<p class="st-q">'+L('How does Lefebvre’s theory of the production of space explain the reproduction of Pittsburgh’s industrial-heritage space, how does heritage tourism drive urban renewal, and what does this mean for Xiangtan?','列斐伏尔的空间生产理论如何解释匹兹堡工业遗产空间的再生产？工业遗产旅游如何推动城市空间更新？匹兹堡的经验对湘潭有何启示？')+'</p></section>'+
+  '<section class="st-sec" id="pt-w"><h4>'+L('Why Pittsburgh','为什么是匹兹堡')+'</h4>'+
+   P('Pittsburgh is a typical old industrial city of the United States. Since the 1980s it has changed from a “steel city” to a “green and innovative city”. What is distinctive is that it did not abandon industrial culture: through industrial-heritage tourism it gradually reshaped space, culture, ecology and economy. The paper treats it both as a model of urban transition and as a research sample of the sustainable reproduction of urban space.','匹兹堡是美国典型的老工业城市，自20世纪80年代以来经历了由“钢铁之城”向“绿色创新之城”的转型。其独特之处在于并未完全抛弃工业文化，而是通过工业遗产旅游逐步实现对空间、文化、生态与经济的重塑。论文把它既当作“城市转型”的范例，也当作“城市空间可持续再生产”的研究样本。')+'</section>'+
+  '<section class="st-sec" id="pt-s"><h4>'+L('Five suggestions for Xiangtan','对湘潭的五点建议')+'</h4><div class="st-args">'+five.map(card).join('')+'</div></section>'+
+  '<section class="st-sec" id="pt-c"><h4>'+L('Conclusion','结论')+'</h4>'+
+   P('In Pittsburgh, industrial-heritage tourism is not only a way to revive the economy but a practice of spatial reproduction. Space is reused, by renewing its material properties and accessibility, breaking the isolation of old industrial space and building a new public network. Its cultural meaning is rebuilt, so the public no longer sees heritage as “decay”. And many parties take part, moving people from “users of space” to “co-creators of space”.','在匹兹堡，工业遗产旅游不只是一种经济振兴策略，更是一种空间再生产实践。一是空间再利用：更新空间的物质属性与可达性，打破旧有工业空间的孤立和封闭，构建新的公共性空间网络。二是文化意义重构，消除公众对工业遗产的“衰败”认知。三是多元参与，推动人们从“空间使用者”转为“空间共创者”。')+
+   '<div class="chips" style="margin-top:26px">'+[['Industrial-heritage tourism','工业遗产旅游'],['Urban renewal','城市更新'],['Production of space','空间生产'],['Pittsburgh','匹兹堡'],['Xiangtan','湘潭']].map(function(k){return '<span>'+L(k[0],k[1])+'</span>';}).join('')+'</div>'+
+   '<p class="st-p" style="margin-top:22px;color:var(--muted)">'+L('Selected as an Outstanding Paper at the 15th Annual Academic Conference of Hunan Social Science Circles; awarded by the Hunan Federation of Social Science Circles, October 2025.','入选第十五届湖南省社会科学界学术年会优秀论文，由湖南省社会科学界联合会颁发，2025年10月。')+'</p></section>'+
+  '</div></div>';})();}
 var bar=document.getElementById('stBar');
 function stSpy(){if(!det.classList.contains('study'))return;var max=det.scrollHeight-det.clientHeight;bar.style.transform='scaleX('+(max>0?Math.min(1,det.scrollTop/max):0)+')';
  var bs=body.querySelectorAll('.st-toc button'),cur=null,lim=det.getBoundingClientRect().top+180;
