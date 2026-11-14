@@ -1145,8 +1145,7 @@ usePal(PAL[pick]?pick:'p1');
 function setLang(l){root.setAttribute('data-lang',l);root.lang=l==='zh'?'zh-CN':'en';
   document.querySelectorAll('.lang button').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.l===l);});
   try{localStorage.setItem('lang',l);}catch(e){}}
-var saved=null;try{saved=localStorage.getItem('lang');}catch(e){}
-setLang(saved||'en');
+setLang('en');
 document.querySelectorAll('.lang button').forEach(function(b){b.addEventListener('click',function(){setLang(b.dataset.l);});});
 
 /* ---------- contact pop-up ---------- */
