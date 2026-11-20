@@ -2352,5 +2352,18 @@ if(document.readyState==='complete')setTimeout(start,50);else addEventListener('
 /* the cards on the home page show title and introduction only: no date or tag line */
 document.querySelectorAll('#studies .item .k,#digital .item .k,#public .item .k,#apps .item .k').forEach(function(k){k.remove();});
 </script>
+<script data-goatcounter="https://xuhao0911.goatcounter.com/count" data-goatcounter-settings='{"no_onload":true}' async src="//gc.zgo.at/count.js"></script>
+<script>
+/* Visit counting (GoatCounter, cookie-free, no personal data). Counts the home page, each section / detail page opened
+   (hash route), and clicks on outbound links. Own visits can be excluded by opening /#toggle-goatcounter once per browser. */
+(function(){
+ function gc(o,n){n=n||0;if(window.goatcounter&&window.goatcounter.count){try{window.goatcounter.count(o);}catch(e){}}else if(n<40)setTimeout(function(){gc(o,n+1);},250);}
+ function view(){var id=location.hash.slice(1);if(id==='toggle-goatcounter')return;gc({path:id?'/'+id:'/',title:id||'home'});}
+ view();
+ window.addEventListener('hashchange',view);
+ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href^="http"]');if(!a)return;
+  try{var u=new URL(a.href);if(u.host===location.host)return;gc({path:'click/'+u.host+u.pathname.replace(/\/$/,''),title:'Click: '+u.host+u.pathname,event:true});}catch(x){}});
+})();
+</script>
 </body>
 </html>
